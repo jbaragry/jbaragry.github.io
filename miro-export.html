@@ -14,9 +14,10 @@
                 // miro.board.ui.openLeftSidebar('sidebar.html')
                 // alert('Ardoq for fun and profit!')
                 fetch('https://nmg4v4k4cb.execute-api.eu-north-1.amazonaws.com/default/test-ardoq-function')
-                  .then(response => response.json())
-                  .then(data => console.log(data))
-                  .then(alert(data));
+                  .then(res => res.json())
+                  .then((out) => {
+                      console.log('Output: ', out);
+                 }).catch(err => console.error(err));
               }
             }
           }
