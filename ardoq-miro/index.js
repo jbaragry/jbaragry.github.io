@@ -8,7 +8,7 @@ miro.onReady(() => {
         title: 'ardoq - miro',
         svgIcon: icon24,
         onClick: () => {
-          miro.board.ui.openLeftSidebar('sidebar.html')
+          miro.board.ui.openLeftSidebar('ardoq-miro/sidebar.html')
         },
       },
     },
