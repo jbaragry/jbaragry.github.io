@@ -1,14 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Ardoq - Miro Integration</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
+
+    <style>
+      .rtb-sidebar-caption {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.8);
+        padding: 24px 0 0 24px;
+      }
+
+      .no-selected-widget {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 60px;
+        color: #999;
+      }
+
+      .widget-info {
+        padding: 20px 24px 0 24px;
+        height: 100%;
+      }
+
+      .editor {
+        width: 310px;
+        height: calc(100% - 240px);
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 14px;
+        margin: 0 -10px;
+        resize: none;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="sidebar__content">
-      <div id="stat-container" class="stat-list">
-        <div class="stat-list__header">Widgets to export</div>
-      </div>
+    <div class="rtb-sidebar-caption">Miro -> Ardoq export</div>
+    <div class="widget-info">
+      <textarea placeholder="frame name here" id="editor" class="editor"></textarea><br /><br />
+      <br /><br />
+      <button onclick="onCreateClick()">Export widgets from Frame</button>
     </div>
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
-    <script src="sidebar.js"></script>
+
   </body>
 </html>
