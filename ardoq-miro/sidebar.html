@@ -5,6 +5,37 @@
     <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
 
     <style>
+      .ardoq-btn {
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid;
+        padding: 10px 16px 8px 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+        line-height: 1;
+        cursor: pointer;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: rgba(255, 255, 255, 1);
+        border-color: rgb(119, 0, 121);
+        background-color: rgb(119, 0, 121);
+        font-family: OpenSans, Arial, Helvetica, sans-serif;
+      }
+
+      .ardoq-btn-logo {
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 4px;
+        margin-bottom: 4px;
+      }
+
       .rtb-sidebar-caption {
         font-size: 14px;
         font-weight: bold;
@@ -20,7 +51,7 @@
       }
 
       .widget-info {
-        padding: 20px 24px 0 24px;
+        padding: 20px 20px 0 18px
         height: 100%;
       }
 
@@ -32,20 +63,33 @@
         box-sizing: border-box;
         font-family: Arial;
         font-size: 14px;
-        margin: 0 -10px;
         resize: none;
+      }
+
+      .editor:focus {
+        border: 1px solid rgb(119, 0, 121);
       }
     </style>
   </head>
 
   <body>
-    <div class="rtb-sidebar-caption">Miro -> Ardoq export</div>
+    <div class="rtb-sidebar-caption">
+      Miro to Ardoq
+      <img
+        class="ardoq-btn-logo"
+        src="https://app.ardoq.com/favicon.ico"
+        style="height: 18px; vertical-align: middle"
+      />
+    </div>
     <div class="widget-info">
-      <textarea placeholder="frame name here" id="editor" class="editor"></textarea><br /><br />
+      <textarea placeholder="Frame Names" id="editor" class="editor"></textarea
+      ><br /><br />
       <br /><br />
-      <button onclick="onCreateClick()">Export widgets from Frame</button>
+      <button class="ardoq-btn" onclick="onCreateClick()">
+        <img class="ardoq-btn-logo" src="https://app.ardoq.com/favicon.ico" />
+        Sync to Ardoq
+      </button>
     </div>
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
-
   </body>
 </html>
